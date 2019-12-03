@@ -58,10 +58,10 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.10</version>
+                <version>1.2.1</version>
                 <configuration>
                     <imageName>${project.artifactId}</imageName>
-                    <baseImage>java:8</baseImage>
+                    <baseImage>openjdk:8</baseImage>
                     <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
                     <!-- copy the service's jar file from target into the root directory of the image -->
                     <resources>
